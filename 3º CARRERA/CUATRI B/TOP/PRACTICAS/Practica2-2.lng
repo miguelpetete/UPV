@@ -1,0 +1,42 @@
+!Una empresa trabaja según una jornada de servicio de 10 horas, en la que
+cada turno debe completar 8 horas de trabajo. El número mínimo de
+empleados en servicio cada hora y considerando que la incorporación
+debe realizarse al comienzo de cada hora es el que recoge la tabla
+siguiente.
+
+HORA                  8-9  9-10 10-11 11-12 12-13 13-14 14-15 15-16 16-17 17-18
+Número de Empleados    20   40    60   80    60    50    40    50    60    30
+
+El descanso que toma cada turno (mínimo de una hora) no se puede hacer
+antes de haber trabajado 3 horas ni después de trabajar más de 5.
+
+Formula un modelo para determinar los turnos de trabajo que cubran las
+necesidades y requieran la menor cantidad posible de trabajadores.;
+
+!VARIABLES:
+Xi = personas que hacen el turno i. i={1...9}. Según tabla. ;
+
+!FUNCIÓN OBJETIVO;
+MIN= (X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8 + X9);
+
+!RESTICCIONES;
+[Demanda_8_9]   X1 + X2 + X3 + X4 + X5 + X6 >= 20;
+[Demanda_9_10]  X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8 + X9 >= 40;
+[Demanda_10_11] X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8 + X9 >= 60;
+[Demanda_11_12] X3 + X4 + X5 + X6 + X7 + X8 + X9 >= 80;
+[Demanda_12_13] X1 + X5 + X6 +X8 + X9 >= 60;
+[Demanda_13_14] X1 + X2 + X3 + X7 + X9 >= 50;
+[Demanda_14_15] X1 + X2 + X3 + X4 + X5 + X7 + X8 >= 40;
+[Demanda_15_16] X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8 + X9 >= 50;
+[Demanda_16_17] X1 + X2 + X3 + X4 + X5 + X6 + X7 + X8 + X9 >= 60;
+[Demanda_17_18] X2 + X4 + X6 + X7 + X8 + X9 >= 30;
+
+@GIN(X1);
+@GIN(X2);
+@GIN(X3);
+@GIN(X4);
+@GIN(X5);
+@GIN(X6);
+@GIN(X7);
+@GIN(X8);
+@GIN(X9);

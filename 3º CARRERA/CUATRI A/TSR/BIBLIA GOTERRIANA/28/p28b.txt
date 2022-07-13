@@ -1,0 +1,2 @@
+let rcv = zmq.socket('sub'), snd = zmq.socket(‘push')
+rcev.connect( 'tcp://*:9998'); snd.connect( 'tcp://*:9999' )

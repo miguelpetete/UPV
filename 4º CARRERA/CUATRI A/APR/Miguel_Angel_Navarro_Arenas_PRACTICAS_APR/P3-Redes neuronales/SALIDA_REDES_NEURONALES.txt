@@ -1,0 +1,469 @@
+-------------------------------------------------------------------
+ALGORITMO DE OPTIMIZACION ---- ORIGINAL : ADAM
+-------------------------------------------------------------------
+
+->ORIGINAL
+Epoch 1, Loss=0.2748
+Epoch 2, Loss=0.0985
+Epoch 3, Loss=0.0650
+Epoch 4, Loss=0.0447
+Epoch 5, Loss=0.0330
+Epoch 6, Loss=0.0263
+Epoch 7, Loss=0.0201
+Epoch 8, Loss=0.0189
+Epoch 9, Loss=0.0145
+Epoch 10, Loss=0.0149
+Epoch 11, Loss=0.0138
+Epoch 12, Loss=0.0142
+Epoch 13, Loss=0.0079
+Epoch 14, Loss=0.0068
+Epoch 15, Loss=0.0137
+Epoch 16, Loss=0.0078
+Epoch 17, Loss=0.0069
+Epoch 18, Loss=0.0119
+Epoch 19, Loss=0.0081
+Epoch 20, Loss=0.0067
+Tasa de error en entrenamiento: 0.14%
+Tasa de error en validación: 1.85%
+----------
+-> ORIGINAL CON ADADELTA
+Epoch 1, Loss=2.2926
+Epoch 2, Loss=2.2719
+Epoch 3, Loss=2.2480
+Epoch 4, Loss=2.2187
+Epoch 5, Loss=2.1822
+Epoch 6, Loss=2.1368
+Epoch 7, Loss=2.0806
+Epoch 8, Loss=2.0123
+Epoch 9, Loss=1.9315
+Epoch 10, Loss=1.8392
+Epoch 11, Loss=1.7371
+Epoch 12, Loss=1.6285
+Epoch 13, Loss=1.5173
+Epoch 14, Loss=1.4078
+Epoch 15, Loss=1.3044
+Epoch 16, Loss=1.2092
+Epoch 17, Loss=1.1240
+Epoch 18, Loss=1.0487
+Epoch 19, Loss=0.9825
+Epoch 20, Loss=0.9246
+Tasa de error en entrenamiento: 18.84%
+Tasa de error en validación: 19.52%
+----------
+-> ORIGINAL CON SGD
+Epoch 1, Loss=2.2943
+Epoch 2, Loss=2.2735
+Epoch 3, Loss=2.2490
+Epoch 4, Loss=2.2176
+Epoch 5, Loss=2.1756
+Epoch 6, Loss=2.1177
+Epoch 7, Loss=2.0379
+Epoch 8, Loss=1.9304
+Epoch 9, Loss=1.7926
+Epoch 10, Loss=1.6283
+Epoch 11, Loss=1.4507
+Epoch 12, Loss=1.2797
+Epoch 13, Loss=1.1313
+Epoch 14, Loss=1.0100
+Epoch 15, Loss=0.9126
+Epoch 16, Loss=0.8342
+Epoch 17, Loss=0.7703
+Epoch 18, Loss=0.7178
+Epoch 19, Loss=0.6741
+Epoch 20, Loss=0.6373
+Tasa de error en entrenamiento: 15.77%
+Tasa de error en validación: 16.58%
+-------------
+-> ORIGINAL CON ADAGRAD
+Epoch 1, Loss=0.5087
+Epoch 2, Loss=0.3081
+Epoch 3, Loss=0.2756
+Epoch 4, Loss=0.2561
+Epoch 5, Loss=0.2420
+Epoch 6, Loss=0.2311
+Epoch 7, Loss=0.2219
+Epoch 8, Loss=0.2141
+Epoch 9, Loss=0.2072
+Epoch 10, Loss=0.2010
+Epoch 11, Loss=0.1958
+Epoch 12, Loss=0.1907
+Epoch 13, Loss=0.1864
+Epoch 14, Loss=0.1821
+Epoch 15, Loss=0.1783
+Epoch 16, Loss=0.1746
+Epoch 17, Loss=0.1714
+Epoch 18, Loss=0.1681
+Epoch 19, Loss=0.1652
+Epoch 20, Loss=0.1624
+Tasa de error en entrenamiento: 4.57%
+Tasa de error en validación: 5.33%
+
+
+
+-------------------------------------------------------------------
+FUNCIÓN DE ACTIVACIÓN ------ ORIGINAL RELU
+-------------------------------------------------------------------
+-> ORIGINAL CON SIGMOID
+Epoch 1, Loss=0.5530
+Epoch 2, Loss=0.2019
+Epoch 3, Loss=0.1451
+Epoch 4, Loss=0.1093
+Epoch 5, Loss=0.0857
+Epoch 6, Loss=0.0677
+Epoch 7, Loss=0.0538
+Epoch 8, Loss=0.0417
+Epoch 9, Loss=0.0342
+Epoch 10, Loss=0.0263
+Epoch 11, Loss=0.0211
+Epoch 12, Loss=0.0177
+Epoch 13, Loss=0.0132
+Epoch 14, Loss=0.0107
+Epoch 15, Loss=0.0105
+Epoch 16, Loss=0.0075
+Epoch 17, Loss=0.0071
+Epoch 18, Loss=0.0067
+Epoch 19, Loss=0.0052
+Epoch 20, Loss=0.0035
+Tasa de error en entrenamiento: 0.05%
+Tasa de error en validación: 2.35%
+-------------
+-> ORIGINAL CON TANH
+Epoch 1, Loss=0.3053
+Epoch 2, Loss=0.1453
+Epoch 3, Loss=0.0985
+Epoch 4, Loss=0.0736
+Epoch 5, Loss=0.0530
+Epoch 6, Loss=0.0410
+Epoch 7, Loss=0.0310
+Epoch 8, Loss=0.0227
+Epoch 9, Loss=0.0169
+Epoch 10, Loss=0.0147
+Epoch 11, Loss=0.0120
+Epoch 12, Loss=0.0105
+Epoch 13, Loss=0.0105
+Epoch 14, Loss=0.0078
+Epoch 15, Loss=0.0044
+Epoch 16, Loss=0.0118
+Epoch 17, Loss=0.0075
+Epoch 18, Loss=0.0087
+Epoch 19, Loss=0.0025
+Epoch 20, Loss=0.0007
+Tasa de error en entrenamiento: 0.00%
+Tasa de error en validación: 1.75%
+
+
+
+-------------------------------------------------------------------
+NÚMERO DE CAPAS ------ ORIGINAL 2
+-------------------------------------------------------------------
+-> 1 SOLA CAPA
+Epoch 1, Loss=0.6431
+Epoch 2, Loss=0.3554
+Epoch 3, Loss=0.3164
+Epoch 4, Loss=0.2978
+Epoch 5, Loss=0.2866
+Epoch 6, Loss=0.2788
+Epoch 7, Loss=0.2731
+Epoch 8, Loss=0.2685
+Epoch 9, Loss=0.2649
+Epoch 10, Loss=0.2619
+Epoch 11, Loss=0.2591
+Epoch 12, Loss=0.2572
+Epoch 13, Loss=0.2552
+Epoch 14, Loss=0.2532
+Epoch 15, Loss=0.2514
+Epoch 16, Loss=0.2503
+Epoch 17, Loss=0.2486
+Epoch 18, Loss=0.2475
+Epoch 19, Loss=0.2466
+Epoch 20, Loss=0.2455
+Tasa de error en entrenamiento: 6.68%
+Tasa de error en validación: 6.98%
+-------------
+-> 3 CAPAS
+Epoch 1, Loss=0.3162
+Epoch 2, Loss=0.1454
+Epoch 3, Loss=0.1009
+Epoch 4, Loss=0.0760
+Epoch 5, Loss=0.0578
+Epoch 6, Loss=0.0465
+Epoch 7, Loss=0.0347
+Epoch 8, Loss=0.0300
+Epoch 9, Loss=0.0251
+Epoch 10, Loss=0.0196
+Epoch 11, Loss=0.0174
+Epoch 12, Loss=0.0176
+Epoch 13, Loss=0.0138
+Epoch 14, Loss=0.0154
+Epoch 15, Loss=0.0146
+Epoch 16, Loss=0.0110
+Epoch 17, Loss=0.0094
+Epoch 18, Loss=0.0127
+Epoch 19, Loss=0.0119
+Epoch 20, Loss=0.0095
+Tasa de error en entrenamiento: 0.27%
+Tasa de error en validación: 2.02%
+
+
+
+-------------------------------------------------------------------
+NEURONAS POR CAPA ------ ORIGINAL (500, 300)
+-------------------------------------------------------------------
+-> (100, 100)
+Epoch 1, Loss=0.3022
+Epoch 2, Loss=0.1432
+Epoch 3, Loss=0.0989
+Epoch 4, Loss=0.0696
+Epoch 5, Loss=0.0513
+Epoch 6, Loss=0.0390
+Epoch 7, Loss=0.0295
+Epoch 8, Loss=0.0212
+Epoch 9, Loss=0.0173
+Epoch 10, Loss=0.0158
+Epoch 11, Loss=0.0121
+Epoch 12, Loss=0.0086
+Epoch 13, Loss=0.0102
+Epoch 14, Loss=0.0096
+Epoch 15, Loss=0.0064
+Epoch 16, Loss=0.0072
+Epoch 17, Loss=0.0109
+Epoch 18, Loss=0.0040
+Epoch 19, Loss=0.0056
+Epoch 20, Loss=0.0072
+Tasa de error en entrenamiento: 0.25%
+Tasa de error en validación: 2.70%
+-------------
+-> (100,500)
+Epoch 1, Loss=0.3008
+Epoch 2, Loss=0.1444
+Epoch 3, Loss=0.0982
+Epoch 4, Loss=0.0714
+Epoch 5, Loss=0.0519
+Epoch 6, Loss=0.0393
+Epoch 7, Loss=0.0297
+Epoch 8, Loss=0.0231
+Epoch 9, Loss=0.0177
+Epoch 10, Loss=0.0141
+Epoch 11, Loss=0.0110
+Epoch 12, Loss=0.0097
+Epoch 13, Loss=0.0098
+Epoch 14, Loss=0.0109
+Epoch 15, Loss=0.0096
+Epoch 16, Loss=0.0054
+Epoch 17, Loss=0.0085
+Epoch 18, Loss=0.0055
+Epoch 19, Loss=0.0016
+Epoch 20, Loss=0.0115
+Tasa de error en entrenamiento: 1.38%
+Tasa de error en validación: 3.45%
+-------------
+-> (100,800)
+Epoch 1, Loss=0.2996
+Epoch 2, Loss=0.1457
+Epoch 3, Loss=0.0978
+Epoch 4, Loss=0.0712
+Epoch 5, Loss=0.0541
+Epoch 6, Loss=0.0387
+Epoch 7, Loss=0.0296
+Epoch 8, Loss=0.0219
+Epoch 9, Loss=0.0161
+Epoch 10, Loss=0.0154
+Epoch 11, Loss=0.0148
+Epoch 12, Loss=0.0079
+Epoch 13, Loss=0.0080
+Epoch 14, Loss=0.0123
+Epoch 15, Loss=0.0089
+Epoch 16, Loss=0.0060
+Epoch 17, Loss=0.0051
+Epoch 18, Loss=0.0057
+Epoch 19, Loss=0.0094
+Epoch 20, Loss=0.0055
+Tasa de error en entrenamiento: 0.18%
+Tasa de error en validación: 2.15%
+-------------
+->(500, 100)
+Epoch 1, Loss=0.3052
+Epoch 2, Loss=0.1469
+Epoch 3, Loss=0.1002
+Epoch 4, Loss=0.0744
+Epoch 5, Loss=0.0552
+Epoch 6, Loss=0.0411
+Epoch 7, Loss=0.0303
+Epoch 8, Loss=0.0231
+Epoch 9, Loss=0.0162
+Epoch 10, Loss=0.0168
+Epoch 11, Loss=0.0131
+Epoch 12, Loss=0.0092
+Epoch 13, Loss=0.0054
+Epoch 14, Loss=0.0126
+Epoch 15, Loss=0.0086
+Epoch 16, Loss=0.0070
+Epoch 17, Loss=0.0078
+Epoch 18, Loss=0.0081
+Epoch 19, Loss=0.0036
+Epoch 20, Loss=0.0031
+Tasa de error en entrenamiento: 0.04%
+Tasa de error en validación: 1.85%
+-------------
+->(500, 500)
+Epoch 1, Loss=0.3050
+Epoch 2, Loss=0.1486
+Epoch 3, Loss=0.0994
+Epoch 4, Loss=0.0708
+Epoch 5, Loss=0.0535
+Epoch 6, Loss=0.0398
+Epoch 7, Loss=0.0291
+Epoch 8, Loss=0.0219
+Epoch 9, Loss=0.0182
+Epoch 10, Loss=0.0139
+Epoch 11, Loss=0.0134
+Epoch 12, Loss=0.0109
+Epoch 13, Loss=0.0071
+Epoch 14, Loss=0.0067
+Epoch 15, Loss=0.0145
+Epoch 16, Loss=0.0054
+Epoch 17, Loss=0.0033
+Epoch 18, Loss=0.0109
+Epoch 19, Loss=0.0099
+Epoch 20, Loss=0.0024
+Tasa de error en entrenamiento: 0.02%
+Tasa de error en validación: 2.07%
+-------------
+->(500, 800)
+Epoch 1, Loss=0.2992
+Epoch 2, Loss=0.1451
+Epoch 3, Loss=0.1012
+Epoch 4, Loss=0.0721
+Epoch 5, Loss=0.0548
+Epoch 6, Loss=0.0391
+Epoch 7, Loss=0.0296
+Epoch 8, Loss=0.0234
+Epoch 9, Loss=0.0185
+Epoch 10, Loss=0.0148
+Epoch 11, Loss=0.0110
+Epoch 12, Loss=0.0097
+Epoch 13, Loss=0.0107
+Epoch 14, Loss=0.0081
+Epoch 15, Loss=0.0094
+Epoch 16, Loss=0.0064
+Epoch 17, Loss=0.0059
+Epoch 18, Loss=0.0076
+Epoch 19, Loss=0.0053
+Epoch 20, Loss=0.0058
+Tasa de error en entrenamiento: 0.19%
+Tasa de error en validación: 2.15%
+-------------
+->(800, 100)
+Epoch 1, Loss=0.3004
+Epoch 2, Loss=0.1455
+Epoch 3, Loss=0.0996
+Epoch 4, Loss=0.0713
+Epoch 5, Loss=0.0533
+Epoch 6, Loss=0.0394
+Epoch 7, Loss=0.0301
+Epoch 8, Loss=0.0236
+Epoch 9, Loss=0.0181
+Epoch 10, Loss=0.0133
+Epoch 11, Loss=0.0123
+Epoch 12, Loss=0.0080
+Epoch 13, Loss=0.0117
+Epoch 14, Loss=0.0079
+Epoch 15, Loss=0.0071
+Epoch 16, Loss=0.0078
+Epoch 17, Loss=0.0092
+Epoch 18, Loss=0.0039
+Epoch 19, Loss=0.0052
+Epoch 20, Loss=0.0083
+Tasa de error en entrenamiento: 0.13%
+Tasa de error en validación: 2.20%
+-------------
+->(800, 500)
+Epoch 1, Loss=0.2979
+Epoch 2, Loss=0.1439
+Epoch 3, Loss=0.1000
+Epoch 4, Loss=0.0722
+Epoch 5, Loss=0.0530
+Epoch 6, Loss=0.0398
+Epoch 7, Loss=0.0309
+Epoch 8, Loss=0.0240
+Epoch 9, Loss=0.0160
+Epoch 10, Loss=0.0140
+Epoch 11, Loss=0.0109
+Epoch 12, Loss=0.0118
+Epoch 13, Loss=0.0116
+Epoch 14, Loss=0.0086
+Epoch 15, Loss=0.0050
+Epoch 16, Loss=0.0089
+Epoch 17, Loss=0.0101
+Epoch 18, Loss=0.0086
+Epoch 19, Loss=0.0034
+Epoch 20, Loss=0.0022
+Tasa de error en entrenamiento: 0.05%
+Tasa de error en validación: 1.97%
+-------------
+->(800, 800)
+Epoch 1, Loss=0.3041
+Epoch 2, Loss=0.1465
+Epoch 3, Loss=0.0966
+Epoch 4, Loss=0.0710
+Epoch 5, Loss=0.0533
+Epoch 6, Loss=0.0405
+Epoch 7, Loss=0.0294
+Epoch 8, Loss=0.0224
+Epoch 9, Loss=0.0172
+Epoch 10, Loss=0.0130
+Epoch 11, Loss=0.0124
+Epoch 12, Loss=0.0110
+Epoch 13, Loss=0.0124
+Epoch 14, Loss=0.0090
+Epoch 15, Loss=0.0099
+Epoch 16, Loss=0.0056
+Epoch 17, Loss=0.0059
+Epoch 18, Loss=0.0053
+Epoch 19, Loss=0.0105
+Epoch 20, Loss=0.0070
+Tasa de error en entrenamiento: 0.06%
+Tasa de error en validación: 2.03%
+
+
+----------------------------------
+EJECUCIÓN CON LOS MEJORES VALORES. 
+----------------------------------
+-> (500, 300)
+Epoch 1, Loss=0.3003
+Epoch 2, Loss=0.1449
+Epoch 3, Loss=0.0990
+Epoch 4, Loss=0.0718
+Epoch 5, Loss=0.0533
+Epoch 6, Loss=0.0389
+Epoch 7, Loss=0.0292
+Epoch 8, Loss=0.0222
+Epoch 9, Loss=0.0180
+Epoch 10, Loss=0.0146
+Epoch 11, Loss=0.0102
+Epoch 12, Loss=0.0142
+Epoch 13, Loss=0.0087
+Epoch 14, Loss=0.0078
+Epoch 15, Loss=0.0074
+Epoch 16, Loss=0.0045
+Epoch 17, Loss=0.0036
+Epoch 18, Loss=0.0182
+Epoch 19, Loss=0.0082
+Epoch 20, Loss=0.0033
+Tasa de error en entrenamiento: 0.00%
+Tasa de error en validación: 1.83%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

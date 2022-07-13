@@ -1,0 +1,22 @@
+const net = require(‘net')
+exports.client = function (port,msg,fdata,fend) {
+	const c = net.connect( port)
+	c.on( 'data', fdata)
+	c.on('end' ,fend )
+	msg()
+}
+exports.server = function (port,fdata,fend) {
+	net.createServer(function(c) {
+		c.on( ‘data’, fdata)
+		c.on('end' ,fend )
+	}).Llisten(port)
+}
+exports.proxy = function (port,sport) {
+	net.createServer(function(c) {
+		const s = new net.Socket()
+		s.connect(sport, ()=>{
+			c.on('data',(msg)=>{s.write(msg)})
+			s.on( 'data',(msg)=>{c.write(msg)})
+		})
+	}).Listen(port)
+}

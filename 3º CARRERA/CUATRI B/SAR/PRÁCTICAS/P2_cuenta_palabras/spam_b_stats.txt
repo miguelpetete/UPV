@@ -1,0 +1,181 @@
+Lines: 11
+Number words (including stopwords): 77
+Vocabulary size: 24
+Number of symbols: 324
+Number of different symbols: 29
+Words (alphabetical order):
+      Bacon: 6
+      Egg: 8
+      Lobster: 1
+      Mornay: 1
+      Sausage: 1
+      Spam: 27
+      Thermidor: 1
+      a: 2
+      and: 12
+      aux: 1
+      baked: 1
+      beans: 1
+      brandy: 1
+      crevettes: 1
+      egg: 1
+      fried: 1
+      garnished: 1
+      on: 1
+      pate: 1
+      sauce: 1
+      ... 4 more ...
+Words (by frequency):
+      Spam: 27
+      and: 12
+      Egg: 8
+      Bacon: 6
+      sausage: 3
+      with: 2
+      a: 2
+      Sausage: 1
+      baked: 1
+      beans: 1
+      Lobster: 1
+      Thermidor: 1
+      aux: 1
+      crevettes: 1
+      Mornay: 1
+      sauce: 1
+      garnished: 1
+      truffle: 1
+      pate: 1
+      brandy: 1
+      ... 4 more ...
+Symbols (alphabetical order):
+      B: 6
+      E: 8
+      L: 1
+      M: 1
+      S: 28
+      T: 1
+      a: 63
+      b: 4
+      c: 8
+      d: 17
+      e: 17
+      f: 3
+      g: 23
+      h: 4
+      i: 5
+      k: 1
+      l: 1
+      m: 28
+      n: 23
+      o: 11
+      ... 9 more ...
+Symbols (by frequency):
+      a: 63
+      p: 29
+      S: 28
+      m: 28
+      g: 23
+      n: 23
+      d: 17
+      e: 17
+      s: 12
+      o: 11
+      r: 9
+      E: 8
+      c: 8
+      t: 8
+      u: 7
+      B: 6
+      i: 5
+      b: 4
+      h: 4
+      f: 3
+      ... 9 more ...
+Words pairs (alphabetical order):
+      $      Egg: 5
+      $      Lobster: 1
+      $      Spam: 5
+      Bacon      $: 2
+      Bacon      and: 2
+      Bacon      sausage: 2
+      Egg      Bacon: 2
+      Egg      Sausage: 1
+      Egg      Spam: 1
+      Egg      and: 3
+      Egg      sausage: 1
+      Lobster      Thermidor: 1
+      Mornay      sauce: 1
+      Sausage      and: 1
+      Spam      $: 9
+      Spam      Bacon: 2
+      Spam      Egg: 3
+      Spam      Spam: 11
+      Spam      and: 1
+      Spam      baked: 1
+      ... 22 more ...
+Words pairs (by frequency):
+      Spam      Spam: 11
+      and      Spam: 9
+      Spam      $: 9
+      $      Egg: 5
+      $      Spam: 5
+      Egg      and: 3
+      sausage      and: 3
+      Spam      Egg: 3
+      and      Bacon: 2
+      Bacon      $: 2
+      Egg      Bacon: 2
+      Bacon      and: 2
+      Bacon      sausage: 2
+      Spam      Bacon: 2
+      Egg      sausage: 1
+      Egg      Sausage: 1
+      Sausage      and: 1
+      Egg      Spam: 1
+      Spam      baked: 1
+      baked      beans: 1
+      ... 22 more ...
+Symbols pairs (alphabetical order):
+      B      a: 6
+      E      g: 7
+      L      o: 2
+      M      o: 2
+      S      a: 2
+      S      p: 11
+      T      h: 2
+      a      c: 6
+      a      g: 5
+      a      k: 2
+      a      m: 11
+      a      n: 14
+      a      r: 2
+      a      t: 2
+      a      u: 9
+      a      y: 2
+      b      a: 2
+      b      e: 2
+      b      r: 2
+      b      s: 2
+      ... 55 more ...
+Symbols pairs (by frequency):
+      a      n: 14
+      p      a: 13
+      n      d: 12
+      S      p: 11
+      a      m: 11
+      s      a: 10
+      g      g: 9
+      a      u: 9
+      o      n: 8
+      E      g: 7
+      B      a: 6
+      a      c: 6
+      c      o: 6
+      e      d: 6
+      t      e: 6
+      u      s: 5
+      a      g: 5
+      g      e: 5
+      e      r: 4
+      h      e: 4
+      ... 55 more ...

@@ -1,0 +1,15 @@
+CLIPS> (inicio)
+Profundidad Maxima:= 15
+Tipo de Busqueda 
+1.- Anchura
+2.- Profundidad
+2
+Tamanyo maximo eje X grid:= 8
+Tamanyo maximo eje Y grid:= 5
+<Fact-12>
+CLIPS> (run)
+Solucion encontrada en el nivel: 15
+Ultimo hecho: <Fact-164>
+Nodos generados por la ejecucion: 152
+FINALIZANDO LA EJECUCION... 
+CLIPS> 

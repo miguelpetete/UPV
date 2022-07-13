@@ -1,0 +1,22 @@
+!COMENTARIOS CLASE
+!Z*=289247
+!@FOR(Fabricacion(i,j)|i#EQ#1: ---) -> para el primer periodo
+!@FOR(Fabricacion(i,j)|i#NE#1: ---) -> para el resto de periodos;
+
+!Maximizar el beneficio total ;
+[Beneficio_total]MAX=@SUM(Fabricación(i,j):(Beneficio(j)*UVendidas(i,j)-CosteStock(i,j)*UStock(i,j)));
+
+!Restricciones equilibrio;
+@FOR(Fabricación(i,j)|i#EQ#1: [Equilibrio1]Uvendidas(i,j)=Uproducidas(i,j)+0);
+@FOR(Fabricación(i,j)|#NE#1: [Equilibrio2]Uvendidas(i,j)+UStock(i,j) = Uproducidas(i,j)+UStock(i-1,j));
+
+!Capacidad de producción y disponibilidad de máquina;
+@FOR(CapMaquinas(p,m):
+	[Capacidad]@SUM(Fabricacion(p,j):HrsNecesarias(m,j)*UProducidas(p,j))<=
+		(MaquinasDisp(p,m)-MaquinasMant(p,m))*HrsDispMaquina(p,m));
+
+!Existendias en el mes de junio;
+@FOR(Fabricacion(i,j)|i#EQ# 6 : [STOCK_JUNIO]UStock(i,j)=50);
+
+!Capacidad de almacenamiento resto del mes;
+@FOR(Fabricacio(i,j)|i#NE# 6 : @BND(0,UStock(i,j),MaxStock(i,j)));

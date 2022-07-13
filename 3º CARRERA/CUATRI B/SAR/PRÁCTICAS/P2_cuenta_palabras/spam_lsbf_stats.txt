@@ -1,0 +1,228 @@
+Lines: 1
+Number words (including stopwords): 21
+Number words (without stopwords): 14
+Vocabulary size: 14
+Number of symbols: 80
+Number of different symbols: 21
+Words (alphabetical order):
+      aux: 1
+      brandy: 1
+      crevettes: 1
+      egg: 1
+      fried: 1
+      garnished: 1
+      lobster: 1
+      mornay: 1
+      pate: 1
+      sauce: 1
+      spam: 1
+      thermidor: 1
+      top: 1
+      truffle: 1
+Words (by frequency):
+      lobster: 1
+      thermidor: 1
+      aux: 1
+      crevettes: 1
+      mornay: 1
+      sauce: 1
+      garnished: 1
+      truffle: 1
+      pate: 1
+      brandy: 1
+      fried: 1
+      egg: 1
+      top: 1
+      spam: 1
+Symbols (alphabetical order):
+      a: 7
+      b: 2
+      c: 2
+      d: 4
+      e: 11
+      f: 3
+      g: 3
+      h: 2
+      i: 3
+      l: 2
+      m: 3
+      n: 3
+      o: 4
+      p: 3
+      r: 9
+      s: 5
+      t: 7
+      u: 3
+      v: 1
+      x: 1
+      y: 2
+Symbols (by frequency):
+      e: 11
+      r: 9
+      t: 7
+      a: 7
+      s: 5
+      o: 4
+      d: 4
+      m: 3
+      i: 3
+      u: 3
+      n: 3
+      g: 3
+      f: 3
+      p: 3
+      l: 2
+      b: 2
+      h: 2
+      c: 2
+      y: 2
+      x: 1
+      v: 1
+Words pairs (alphabetical order):
+      $ lobster: 1
+      aux crevettes: 1
+      brandy fried: 1
+      crevettes mornay: 1
+      egg top: 1
+      fried egg: 1
+      garnished truffle: 1
+      lobster thermidor: 1
+      mornay sauce: 1
+      pate brandy: 1
+      sauce garnished: 1
+      spam $: 1
+      thermidor aux: 1
+      top spam: 1
+      truffle pate: 1
+Words pairs (by frequency):
+      $ lobster: 1
+      lobster thermidor: 1
+      thermidor aux: 1
+      aux crevettes: 1
+      crevettes mornay: 1
+      mornay sauce: 1
+      sauce garnished: 1
+      garnished truffle: 1
+      truffle pate: 1
+      pate brandy: 1
+      brandy fried: 1
+      fried egg: 1
+      egg top: 1
+      top spam: 1
+      spam $: 1
+Symbols pairs (alphabetical order):
+      am: 2
+      an: 2
+      ar: 2
+      at: 2
+      au: 4
+      ay: 2
+      br: 2
+      bs: 2
+      ce: 2
+      cr: 2
+      do: 2
+      dy: 2
+      ed: 4
+      eg: 2
+      er: 4
+      es: 2
+      et: 2
+      ev: 2
+      ff: 2
+      fl: 2
+      fr: 2
+      ga: 2
+      gg: 2
+      he: 4
+      id: 2
+      ie: 2
+      is: 2
+      le: 2
+      lo: 2
+      mi: 2
+      mo: 2
+      na: 2
+      nd: 2
+      ni: 2
+      ob: 2
+      op: 2
+      or: 4
+      pa: 4
+      ra: 2
+      re: 2
+      ri: 2
+      rm: 2
+      rn: 4
+      ru: 2
+      sa: 2
+      sh: 2
+      sp: 2
+      st: 2
+      te: 6
+      th: 2
+      to: 2
+      tr: 2
+      tt: 2
+      uc: 2
+      uf: 2
+      ux: 2
+      ve: 2
+Symbols pairs (by frequency):
+      te: 6
+      er: 4
+      he: 4
+      or: 4
+      au: 4
+      rn: 4
+      ed: 4
+      pa: 4
+      lo: 2
+      ob: 2
+      bs: 2
+      st: 2
+      th: 2
+      rm: 2
+      mi: 2
+      id: 2
+      do: 2
+      ux: 2
+      cr: 2
+      re: 2
+      ev: 2
+      ve: 2
+      et: 2
+      tt: 2
+      es: 2
+      mo: 2
+      na: 2
+      ay: 2
+      sa: 2
+      uc: 2
+      ce: 2
+      ga: 2
+      ar: 2
+      ni: 2
+      is: 2
+      sh: 2
+      tr: 2
+      ru: 2
+      uf: 2
+      ff: 2
+      fl: 2
+      le: 2
+      at: 2
+      br: 2
+      ra: 2
+      an: 2
+      nd: 2
+      dy: 2
+      fr: 2
+      ri: 2
+      ie: 2
+      eg: 2
+      gg: 2
+      to: 2
+      op: 2
+      sp: 2
+      am: 2

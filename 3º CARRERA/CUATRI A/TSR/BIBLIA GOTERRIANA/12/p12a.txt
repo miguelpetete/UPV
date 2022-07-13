@@ -1,0 +1,2 @@
+size += data. length
+console. log( ‘Directory size is '+size)

@@ -1,0 +1,98 @@
+!Maximizar el beneficio total
+-> VENTAS - COSTES
+-> VENTAS = (sum_ventas_P1) * Ben_P1 + (sum_ventas_P2) * Ben_P2+ (sum_ventas_P3) * Ben_P3
+-> COSTE = sum_stock_productos * coste_almacenaje;
+MAX=(      (V_ENE_P1 + V_FEB_P1 + V_MAR_P1 + V_ABR_P1 + V_MAY_P1 + V_JUN_P1)*10
+	+(V_ENE_P2 + V_FEB_P2 + V_MAR_P2 + V_ABR_P2 + V_MAY_P2 + V_JUN_P2)*6
+	+(V_ENE_P3 + V_FEB_P3 + V_MAR_P3 + V_ABR_P3 + V_MAY_P3 + V_JUN_P3)*8)
+	-
+	(S_ENE_P1+S_ENE_P2+S_ENE_P3+S_FEB_P1+S_FEB_P2+S_FEB_P3 
+	+S_MAR_P1+S_MAR_P2+S_MAR_P3+S_ABR_P1+S_ABR_P2+S_ABR_P3
+	+S_MAY_P1+S_MAY_P2+S_MAY_P3)*0.5;
+
+
+!Capacidad de producción y disponibilidad de Máquina;
+!Lo que trabaja una máquina al mes es, según el enunciado, 2*8*24 -> dos turnos de ocho horas 
+	diarias considerando que un mes tiene 24 días laborables;
+[COR_ENE] 0.5 * P_ENE_P1 + 0.7 * P_ENE_P2 <= 384 * 3; !En enero hay 3 cortadoras, no cuatro;
+[COR_FEB] 0.5 * P_FEB_P1 + 0.7 * P_FEB_P2 <= 384 * 4;
+[COR_MAR] 0.5 * P_MAR_P1 + 0.7 * P_MAR_P2 <= 384 * 4;
+[COR_ABR] 0.5 * P_ABR_P1 + 0.7 * P_ABR_P2 <= 384 * 4;
+[COR_MAY] 0.5 * P_MAY_P1 + 0.7 * P_MAY_P2 <= 384 * 3;
+[COR_JUN] 0.5 * P_JUN_P1 + 0.7 * P_JUN_P2 <= 384 * 4;
+
+[FV_ENE] 0.1 * P_ENE_P1 + 0.2 * P_ENE_P2 <= 384 * 2;
+[FV_FEB] 0.1 * P_FEB_P1 + 0.2 * P_FEB_P2 <= 384 * 2;
+[FV_MAR] 0.1 * P_MAR_P1 + 0.2 * P_MAR_P2 <= 384 * 2;
+[FV_ABR] 0.1 * P_ABR_P1 + 0.2 * P_ABR_P2 <= 384;
+[FV_MAY] 0.1 * P_MAY_P1 + 0.2 * P_MAY_P2 <= 384;
+[FV_JUN] 0.1 * P_JUN_P1 + 0.2 * P_JUN_P2 <= 384 * 2;
+
+[FH_ENE] 0.2 * P_ENE_P1 + 0.8 * P_ENE_P3 <= 384 * 3;
+[FH_FEB] 0.2 * P_FEB_P1 + 0.8 * P_FEB_P3 <= 384;
+[FH_MAR] 0.2 * P_MAR_P1 + 0.8 * P_MAR_P3 <= 384 * 3;
+[FH_ABR] 0.2 * P_ABR_P1 + 0.8 * P_ABR_P3 <= 384 * 3;
+[FH_MAY] 0.2 * P_MAY_P1 + 0.8 * P_MAY_P3 <= 384 * 3;
+[FH_JUN] 0.2 * P_JUN_P1 + 0.8 * P_JUN_P3 <= 384 * 2;
+
+[TAL_ENE] 0.05 * P_ENE_P1 + 0.03 * P_ENE_P2 <= 384;
+[TAL_FEB] 0.05 * P_FEB_P1 + 0.03 * P_FEB_P2 <= 384;
+[TAL_MAR] 0.05 * P_MAR_P1 + 0.03 * P_MAR_P2 <= 0;
+[TAL_ABR] 0.05 * P_ABR_P1 + 0.03 * P_ABR_P2 <= 384;
+[TAL_MAY] 0.05 * P_MAY_P1 + 0.03 * P_MAY_P2 <= 384;
+[TAL_JUN] 0.05 * P_JUN_P1 + 0.03 * P_JUN_P2 <= 384;
+
+[AL_ENE] 0.01 * P_ENE_P3 <= 384;
+[AL_FEB] 0.01 * P_FEB_P3 <= 384;
+[AL_MAR] 0.01 * P_MAR_P3 <= 384;
+[AL_ABR] 0.01 * P_ABR_P3 <= 384;
+[AL_MAY] 0.01 * P_MAY_P3 <= 384;
+[AL_JUN] 0.01 * P_JUN_P3 <= 0;
+
+!Restricciones de equilibrio
+ -> Uds.Vendidas_mes_t + Uds.Stock_mes_t = Uds.Producidas_mes_t + Uds.Stock_mes_t-1;
+[EQ_ENE_P1] V_ENE_P1 + S_ENE_P1 = P_ENE_P1;
+[EQ_ENE_P2] V_ENE_P2 + S_ENE_P2 = P_ENE_P2;
+[EQ_ENE_P3] V_ENE_P3 + S_ENE_P3 = P_ENE_P3;
+[EQ_FEB_P1] V_FEB_P1 + S_FEB_P1 = P_FEB_P1 + S_ENE_P1;
+[EQ_FEB_P2] V_FEB_P2 + S_FEB_P2 = P_FEB_P2 + S_ENE_P2;
+[EQ_FEB_P3] V_FEB_P3 + S_FEB_P3 = P_FEB_P3 + S_ENE_P3;
+[EQ_MAR_P1] V_MAR_P1 + S_MAR_P1 = P_MAR_P1 + S_FEB_P1;
+[EQ_MAR_P2] V_MAR_P2 + S_MAR_P2 = P_MAR_P2 + S_FEB_P2;
+[EQ_MAR_P3] V_MAR_P3 + S_MAR_P3 = P_MAR_P3 + S_FEB_P3;
+[EQ_ABR_P1] V_ABR_P1 + S_ABR_P1 = P_ABR_P1 + S_MAR_P1;
+[EQ_ABR_P2] V_ABR_P2 + S_ABR_P2 = P_ABR_P2 + S_MAR_P2;
+[EQ_ABR_P3] V_ABR_P3 + S_ABR_P3 = P_ABR_P3 + S_MAR_P3;
+[EQ_MAY_P1] V_MAY_P1 + S_MAY_P1 = P_MAY_P1 + S_ABR_P1;
+[EQ_MAY_P2] V_MAY_P2 + S_MAY_P2 = P_MAY_P2 + S_ABR_P2;
+[EQ_MAY_P3] V_MAY_P3 + S_MAY_P3 = P_MAY_P3 + S_ABR_P3;
+[EQ_JUN_P1] V_JUN_P1 + S_JUN_P1 = P_JUN_P1 + S_MAY_P1;
+[EQ_JUN_P2] V_JUN_P2 + S_JUN_P2 = P_JUN_P2 + S_MAY_P2;
+[EQ_JUN_P3] V_JUN_P3 + S_JUN_P3 = P_JUN_P3 + S_MAY_P3;
+
+!Capacidad de almacenamiento;
+[STOCK_ENE_P1] S_ENE_P1 <= 100;
+[STOCK_ENE_P2] S_ENE_P2 <= 100;
+[STOCK_ENE_P3] S_ENE_P3 <= 100;
+
+[STOCK_FEB_P1] S_FEB_P1 <= 100;
+[STOCK_FEB_P2] S_FEB_P2 <= 100;
+[STOCK_FEB_P3] S_FEB_P3 <= 100;
+
+[STOCK_MAR_P1] S_MAR_P1 <= 100;
+[STOCK_MAR_P2] S_MAR_P2 <= 100;
+[STOCK_MAR_P3] S_MAR_P3 <= 100;
+
+[STOCK_ABR_P1] S_ABR_P1 <= 100;
+[STOCK_ABR_P2] S_ABR_P2 <= 100;
+[STOCK_ABR_P3] S_ABR_P3 <= 100;
+
+[STOCK_MAY_P1] S_MAY_P1 <= 100;
+[STOCK_MAY_P2] S_MAY_P2 <= 100;
+[STOCK_MAY_P3] S_MAY_P3 <= 100;
+
+!STOCK FINAL; 
+[STOCK_JUN_P1] S_JUN_P1 = 50;
+[STOCK_JUN_P2] S_JUN_P2 = 50;
+[STOCK_JUN_P3] S_JUN_P3 = 50;
+

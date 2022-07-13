@@ -1,0 +1,2 @@
+setInterval(()=>{uno; dos}, 1000)
+

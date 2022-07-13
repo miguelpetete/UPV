@@ -1,0 +1,4 @@
+c.on('data', function(file) {
+try { c.write(require('fs').readFileSync(file)) }
+catch { throw(‘unable to read '+file+' file') }
+})

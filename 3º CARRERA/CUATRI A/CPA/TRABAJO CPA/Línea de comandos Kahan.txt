@@ -1,0 +1,165 @@
+
+
+TOMA DE TIEMPOS KAHAN MIGUEL ÁNGEL NAVARRO Y CARLOS RUIZ TORRES
+
+
+-------------------------------------------------------
+----------------- Tiempos 2j --------------------------
+-------------------------------------------------------
+El programa ha tardado 45.433786
+El numero de planetas es 80000
+Se han empleado 2 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+ESTÁTICO
+
+El programa ha tardado 45.352104
+El numero de planetas es 80000
+Se han empleado 2 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 22.723488
+El numero de planetas es 80000
+Se han empleado 4 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 22.819785
+El numero de planetas es 80000
+Se han empleado 4 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 12.337699
+El numero de planetas es 80000
+Se han empleado 8 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 12.015733
+El numero de planetas es 80000
+Se han empleado 8 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 7.266378
+El numero de planetas es 80000
+Se han empleado 16 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 7.193850
+El numero de planetas es 80000
+Se han empleado 16 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 4.423652
+El numero de planetas es 80000
+Se han empleado 32 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 4.111269
+El numero de planetas es 80000
+Se han empleado 32 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 4.423899
+El numero de planetas es 80000
+Se han empleado 64 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El programa ha tardado 4.572640
+El numero de planetas es 80000
+Se han empleado 64 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+----------------- Tiempos 2j --------------------------
+-------------------------------------------------------
+El numero de planetas es 80000
+tiempo: 58.019588
+hilos: 2
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 58.095427
+hilos: 2
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 29.651559
+hilos: 4
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 29.484591
+hilos: 4
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 17.345105
+hilos: 8
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 15.096939
+hilos: 8
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 10.467400
+hilos: 16
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 10.419537
+hilos: 16
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 7.134274
+hilos: 32
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 7.025017
+hilos: 32
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
+tiempo: 45.214515
+hilos: 64
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+
+El numero de planetas es 80000
++tiempo: 51.477076
+hilos: 64
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+-------------------------------------------------------
+
+
+
+
+
+
+

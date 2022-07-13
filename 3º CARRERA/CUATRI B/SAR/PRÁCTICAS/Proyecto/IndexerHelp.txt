@@ -1,0 +1,18 @@
+
+Lo primero, la postinglist de un termino es una lista con los
+identificadores de las noticias que contienen ese término. Debe estar
+ordenada de menos a mayor para que los AND y OR de postinglists puedan
+hacerse en tiempo lineal. Además, en un fichero puede habar muchas noticias.
+
+
+Entonces, el problema es determinar el identificador de cada noticia.
+Básicamente hay dos opciones: a) un identificador compuesto por un par
+de valores (identificador del fichero donde está la noticia, la posición
+que la noticia ocupa en ese fichero); b) un identificador único que
+diferencie a cada noticia de las demás de ese fichero y de todos los
+demás ficheros.
+
+
+Más cosas, independientemente de que identificador de noticia elijas,
+deberás tener un identificador por fichero y saber cada noticia en que
+fichero está

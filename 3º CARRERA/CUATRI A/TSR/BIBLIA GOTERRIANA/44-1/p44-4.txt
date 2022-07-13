@@ -1,0 +1,3 @@
+const z = require('./z')
+var s = z.push()
+z.apush(s, [8001, 8002], ['a','b','c'])

@@ -1,0 +1,96 @@
+CLIPS> (clear)
+CLIPS> Loading Selection...
+Defining deffacts: hechos
+Defining deffunction: inicio
+
+[CSTRCPSR1] Expected the beginning of a construct.
+Defining defrule: robot_derecha 
+[EXPRNPSR3] Missing function declaration for defrule.
+
+ERROR:
+(defrule MAIN::robot_derecha
+   ?f <- (grid $?x R ?sig $?y nivel ?n movimiento ?mov hecho ?fact $?resto)
+   (prof-max ?prof)
+   (test (= ?sig 0))
+   (test (<> (length $?x) 7))
+   (test (<> (length $?x) 15))
+   (test (<> (length $?x) 23))
+   (test (<> (length $?x) 31))
+   (test (<> (length $?x) 39))
+   (test (neq ?mov izquierda))
+   (test (< ?n ?prof))
+   =>
+   (assert (grid $?x ?sig R $?y nivel (+ ?n 1) movimiento derecha hecho ?f $?resto))
+   (defrule
+Defining defrule: robot_arriba 
+[EXPRNPSR3] Missing function declaration for defrule.
+
+ERROR:
+(defrule MAIN::robot_arriba
+   ?f <- (grid $?x 0 $?mid R $?y nivel ?n movimiento ?mov hecho ?fact)
+   (prof-max ?prof)
+   (test (= (length $?mid) 7))
+   (test (neq ?mov abajo))
+   (test (< ?n ?prof))
+   =>
+   (assert (grid $?x R $?mid 0 $?y nivel (+ ?n 1) movimiento arriba hecho ?f $?resto))
+   (defrule
+Defining defrule: tritura_derecha 
+[EXPRNPSR3] Missing function declaration for grid.
+
+ERROR:
+(defrule MAIN::tritura_derecha
+   ?f <- (grid $?x R 2 1 $?y nivel ?n $?resto latas ?latas)
+   (prof-max ?prof)
+   (test (< ?n ?prof))
+   =>
+   (assert (grid $?x 0 R 1 $?y nivel (+ ?n 1) $?resto latas (- ?latas 1))
+           (defrule tritura_izquierda ?f <- (grid
+Defining defrule: tritura_arriba 
+[EXPRNPSR3] Missing function declaration for grid.
+
+ERROR:
+(defrule MAIN::tritura_arriba
+   ?f <- (grid $?x 1 $?medio1 2 $?medio2 R $?y nivel ?n $?resto latas ?latas)
+   (prof-max ?prof)
+   (test (< ?n ?prof))
+   (test (= (length $?medio1) 7))
+   (test (= (length $?medio2) 7))
+   =>
+   (assert (grid $?x 1 $?medio1 R $?medio2 0 $?y nivel (+ ?n 1) $?resto latas (- ?latas 1))
+           (defrule tritura_abajo ?f <- (grid
+Defining defrule: empuja-derecha 
+[EXPRNPSR3] Missing function declaration for grid.
+
+ERROR:
+(defrule MAIN::empuja-derecha
+   ?f <- (grid $?x R 2 0 $?y nivel ?n $?resto)
+   (prof-max ?prof)
+   (test (< ?n ?prof))
+   (test (and (<> (length $?x) 7) (<> (length $?y) 31)))
+   (test (and (<> (length $?x) 15) (<> (length $?y) 23)))
+   (test (and (<> (length $?x) 23) (<> (length $?y) 15)))
+   (test (and (<> (length $?x) 31) (<> (length $?y) 7)))
+   (test (and (<> (length $?x) 6) (<> (length $?y) 32)))
+   (test (and (<> (length $?x) 14) (<> (length $?y) 24)))
+   (test (and (<> (length $?x) 22) (<> (length $?y) 16)))
+   (test (and (<> (length $?x) 30) (<> (length $?y) 8)))
+   =>
+   (assert (grid $?x 0 R 2 $?y nivel (+ ?n 1) $?resto)
+           (defrule empuja-izquierda ?f <- (grid
+Defining defrule: empuja-arriba 
+[EXPRNPSR3] Missing function declaration for defrule.
+
+ERROR:
+(defrule MAIN::empuja-arriba
+   ?f <- (grid $?x 0 $?medio1 2 $?medio2 R $?y nivel ?n $?resto)
+   (prof-max ?prof)
+   (test (< ?n ?prof))
+   (test (= (length $?medio1) 7))
+   (test (= (length $?medio2) 7))
+   =>
+   (assert (grid $?x 2 $?medio1 R $?medio2 0 $?y nivel (+ ?nivel 1) $?resto)
+           (bind ?*nod-gen* (+ ?*nod-gen* 1)))
+   (defrule
+Defining defrule: objetivo +j+j+j
+CLIPS> 

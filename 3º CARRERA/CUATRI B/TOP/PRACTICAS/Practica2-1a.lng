@@ -1,0 +1,21 @@
+!PRACTICA 2. APARTADO A)
+Una máquina produce rollos de papel de una anchura estándar de 180 cm.
+Se reciben unos pedidos de al menos 200 rollos de 80 cm de anchura, 120
+rollos de 45 cm y 130 de 27 cm.
+a) Formula un modelo lineal que permita decidir cómo cortar los rollos de
+180 cm de anchura para hacer frente a los pedidos que se tienen, con
+una pérdida mínima de papel en el proceso de corte.
+
+
+!VARIABLES.
+Xi = nº de rollos de 180cm cortados según el corte i. ;
+
+!FUNCIÓN OBJETIVO;
+MIN= 20*X1 + 10*X4 + X5 + 9*X6 + 18*X7 + 18*X8 + 19*X9;
+
+!RESTRICCIONES;
+[Demanda_80cm] 2*X1 + X4 + X5 + X9 >= 200;
+[Demanda_45cm] 4*X2 + X3 + 2*X4 + X5 + 2*X6 + 3*X7 >= 120;
+[Demanda_27cm] 5*X3 + 2*X5 + 3*X6 + X7 + 6*X8 + 2*X9 >=130;
+
+

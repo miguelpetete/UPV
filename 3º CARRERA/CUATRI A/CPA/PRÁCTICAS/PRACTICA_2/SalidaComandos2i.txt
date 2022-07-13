@@ -1,0 +1,60 @@
+El programa ha tardado 45.433786
+El numero de planetas es 80000
+Se han empleado 2 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 45.352104
+El numero de planetas es 80000
+Se han empleado 2 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 22.723488
+El numero de planetas es 80000
+Se han empleado 4 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 22.819785
+El numero de planetas es 80000
+Se han empleado 4 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 12.337699
+El numero de planetas es 80000
+Se han empleado 8 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 12.015733
+El numero de planetas es 80000
+Se han empleado 8 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 7.266378
+El numero de planetas es 80000
+Se han empleado 16 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 7.193850
+El numero de planetas es 80000
+Se han empleado 16 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 4.423652
+El numero de planetas es 80000
+Se han empleado 32 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 4.111269
+El numero de planetas es 80000
+Se han empleado 32 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 4.423899
+El numero de planetas es 80000
+Se han empleado 64 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).
+El programa ha tardado 4.572640
+El numero de planetas es 80000
+Se han empleado 64 hilos
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).

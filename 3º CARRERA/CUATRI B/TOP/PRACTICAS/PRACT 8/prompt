@@ -1,0 +1,464 @@
+
+R version 4.0.4 (2021-02-15) -- "Lost Library Book"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: i386-w64-mingw32/i386 (32-bit)
+
+R es un software libre y viene sin GARANTIA ALGUNA.
+Usted puede redistribuirlo bajo ciertas circunstancias.
+Escriba 'license()' o 'licence()' para detalles de distribucion.
+
+R es un proyecto colaborativo con muchos contribuyentes.
+Escriba 'contributors()' para obtener más información y
+'citation()' para saber cómo citar R o paquetes de R en publicaciones.
+
+Escriba 'demo()' para demostraciones, 'help()' para el sistema on-line de ayuda,
+o 'help.start()' para abrir el sistema de ayuda HTML con su navegador.
+Escriba 'q()' para salir de R.
+
+> install.packages("lpSolveAPI") 
+Installing package into ‘\\CORENTINE/VDI/alumno/MINAAR1/Documentos/R/win-library/4.0’
+(as ‘lib’ is unspecified)
+--- Please select a CRAN mirror for use in this session ---
+probando la URL 'https://cran.rediris.es/bin/windows/contrib/4.0/lpSolveAPI_5.5.2.0-17.7.zip'
+Content type 'application/zip' length 916517 bytes (895 KB)
+downloaded 895 KB
+
+package ‘lpSolveAPI’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+        C:\Users\MINAAR1\AppData\Local\Temp\3\RtmpMNwDAL\downloaded_packages
+> library(lpSolveAPI) 
+> ??add.constraint
+starting httpd help server ... done
+>  ls("package:lpSolveAPI") 
+ [1] "add.column"            "add.constraint"        "add.SOS"              
+ [4] "delete.column"         "delete.constraint"     "delete.lp"            
+ [7] "dim.lpExtPtr"          "dim<-.lpExtPtr"        "dimnames.lpExtPtr"    
+[10] "dimnames<-.lpExtPtr"   "get.basis"             "get.bounds"           
+[13] "get.branch.mode"       "get.column"            "get.constr.type"      
+[16] "get.constr.value"      "get.constraints"       "get.dual.solution"    
+[19] "get.kind"              "get.mat"               "get.objective"        
+[22] "get.primal.solution"   "get.rhs"               "get.sensitivity.obj"  
+[25] "get.sensitivity.objex" "get.sensitivity.rhs"   "get.solutioncount"    
+[28] "get.total.iter"        "get.total.nodes"       "get.type"             
+[31] "get.variables"         "guess.basis"           "lp.control"           
+[34] "make.lp"               "name.lp"               "plot.lpExtPtr"        
+[37] "print.lpExtPtr"        "read.lp"               "resize.lp"            
+[40] "row.add.mode"          "select.solution"       "set.basis"            
+[43] "set.bounds"            "set.branch.mode"       "set.branch.weights"   
+[46] "set.column"            "set.constr.type"       "set.constr.value"     
+[49] "set.mat"               "set.objfn"             "set.rhs"              
+[52] "set.row"               "set.semicont"          "set.type"             
+[55] "solve.lpExtPtr"        "write.lp"             
+>  m <- make.lp(0, 3) 
+> m
+Model name: 
+            C1    C2    C3    
+Minimize     0     0     0    
+Kind       Std   Std   Std    
+Type      Real  Real  Real    
+Upper      Inf   Inf   Inf    
+Lower        0     0     0    
+> set.objfn(model, c(1,9,3)) 
+Error in set.objfn(model, c(1, 9, 3)) : objeto 'model' no encontrado
+> set.objfn(m, c(1,9,3)) 
+> m
+Model name: 
+            C1    C2    C3    
+Minimize     1     9     3    
+Kind       Std   Std   Std    
+Type      Real  Real  Real    
+Upper      Inf   Inf   Inf    
+Lower        0     0     0    
+> add.constraint(model, c(1,2,3),">=",1) 
+Error in add.constraint(model, c(1, 2, 3), ">=", 1) : 
+  objeto 'model' no encontrado
+> add.constraint(m, c(1,2,3),">=",1) 
+> add.constraint(model, c(1,2,3),">=",1) 
+
+> add.constraint(m, c(3,2,2),"<=",15) 
+> m
+Model name: 
+            C1    C2    C3        
+Minimize     1     9     3        
+R1           1     2     3  >=   1
+R2           3     2     2  <=  15
+Kind       Std   Std   Std        
+Type      Real  Real  Real        
+Upper      Inf   Inf   Inf        
+Lower        0     0     0        
+> lp.control(m, sense="max")
+$anti.degen
+[1] "none"
+
+$basis.crash
+[1] "none"
+
+$bb.depthlimit
+[1] -50
+
+$bb.floorfirst
+[1] "automatic"
+
+$bb.rule
+[1] "pseudononint" "greedy"       "dynamic"      "rcostfixing" 
+
+$break.at.first
+[1] FALSE
+
+$break.at.value
+[1] 1e+30
+
+$epsilon
+      epsb       epsd      epsel     epsint epsperturb   epspivot 
+     1e-10      1e-09      1e-12      1e-07      1e-05      2e-07 
+
+$improve
+[1] "dualfeas" "thetagap"
+
+$infinite
+[1] 1e+30
+
+$maxpivot
+[1] 250
+
+$mip.gap
+absolute relative 
+   1e-11    1e-11 
+
+$negrange
+[1] -1e+06
+
+$obj.in.basis
+[1] TRUE
+
+$pivoting
+[1] "devex"    "adaptive"
+
+$presolve
+[1] "none"
+
+$scalelimit
+[1] 5
+
+$scaling
+[1] "geometric"   "equilibrate" "integers"   
+
+$sense
+[1] "maximize"
+
+$simplextype
+[1] "dual"   "primal"
+
+$timeout
+[1] 0
+
+$verbose
+[1] "neutral"
+
+> m
+Model name: 
+            C1    C2    C3        
+Maximize     1     9     3        
+R1           1     2     3  >=   1
+R2           3     2     2  <=  15
+Kind       Std   Std   Std        
+Type      Real  Real  Real        
+Upper      Inf   Inf   Inf        
+Lower        0     0     0        
+> solve(m)
+[1] 0
+> get.objective(m) 
+[1] 67.5
+> get.variables(m) 
+[1] 0.0 7.5 0.0
+> get.constraints(m) 
+[1] 15 15
+> get.dual.solution(m) 
+[1]   1.0   0.0   4.5 -12.5   0.0  -6.0
+> get.sensitivity.obj(m)
+$objfrom
+[1] -1e+30  3e+00 -1e+30
+
+$objtill
+[1] 1.35e+01 1.00e+30 9.00e+00
+
+> get.sensitivity.rhs(m) 
+$duals
+[1]   0.0   4.5 -12.5   0.0  -6.0
+
+$dualsfrom
+[1] -1.0e+30  1.0e+00 -1.0e+30 -1.0e+30 -1.4e+01
+
+$dualstill
+[1] 1.0e+30 1.0e+30 5.0e+00 1.0e+30 7.5e+00
+
+> set.type(m,2,"integer") 
+> set.type(m,3,"integer")
+> m
+Model name: 
+            C1    C2    C3        
+Maximize     1     9     3        
+R1           1     2     3  >=   1
+R2           3     2     2  <=  15
+Kind       Std   Std   Std        
+Type      Real   Int   Int        
+Upper      Inf   Inf   Inf        
+Lower        0     0     0        
+> set.type(m,1,"binary")
+> m
+Model name: 
+           C1   C2   C3        
+Maximize    1    9    3        
+R1          1    2    3  >=   1
+R2          3    2    2  <=  15
+Kind      Std  Std  Std        
+Type      Int  Int  Int        
+Upper       1  Inf  Inf        
+Lower       0    0    0        
+> colNames<-c("x1","x2","x3") 
+> rowNames<-c("res1","res2") 
+> dimnames(m)<-list(rowNames,colNames) 
+> m
+Model name: 
+           x1   x2   x3        
+Maximize    1    9    3        
+res1        1    2    3  >=   1
+res2        3    2    2  <=  15
+Kind      Std  Std  Std        
+Type      Int  Int  Int        
+Upper       1  Inf  Inf        
+Lower       0    0    0        
+> m <- make.lp(0, 3) 
+>  aij <- matrix(c(1, 2, 3, 3, 2, 2), nrow=2, byrow=TRUE) 
+> ci <- c(1,9,3) 
+> bi <- c(1,15) 
+> set.objfn(m,ci) 
+> add.constraint(m, aij[1,],">=",bi[1])
+> add.constraint(m, aij[2,],">=",bi[2]) 
+> m
+Model name: 
+            C1    C2    C3        
+Minimize     1     9     3        
+R1           1     2     3  >=   1
+R2           3     2     2  >=  15
+Kind       Std   Std   Std        
+Type      Real  Real  Real        
+Upper      Inf   Inf   Inf        
+Lower        0     0     0        
+> write.lp(m,'modelo.mps',type="mps") 
+>  getwd() 
+[1] "\\\\CORENTINE/VDI/ALUMNO/MINAAR1/Documentos"
+> m <- read.lp('modelo.mps',type="mps") 
+> n <- make.lp(0, 5) 
+> n
+Model name: 
+            C1    C2    C3    C4    C5    
+Minimize     0     0     0     0     0    
+Kind       Std   Std   Std   Std   Std    
+Type      Real  Real  Real  Real  Real    
+Upper      Inf   Inf   Inf   Inf   Inf    
+Lower        0     0     0     0     0    
+> set.objfn(n, c(634,560,570,704,812)) 
+> n
+Model name: 
+            C1    C2    C3    C4    C5    
+Minimize   634   560   570   704   812    
+Kind       Std   Std   Std   Std   Std    
+Type      Real  Real  Real  Real  Real    
+Upper      Inf   Inf   Inf   Inf   Inf    
+Lower        0     0     0     0     0    
+> add.constraint(n, c(1,0,0,0,0),">=",36) 
+> add.constraint(n, c(0,1,1,0,0),">=",45) 
+> add.constraint(n, c(0,0,0,1,1),">=",36) 
+> n
+Model name: 
+            C1    C2    C3    C4    C5        
+Minimize   634   560   570   704   812        
+R1           1     0     0     0     0  >=  36
+R2           0     1     1     0     0  >=  45
+R3           0     0     0     1     1  >=  36
+Kind       Std   Std   Std   Std   Std        
+Type      Real  Real  Real  Real  Real        
+Upper      Inf   Inf   Inf   Inf   Inf        
+Lower        0     0     0     0     0        
+> add.constraint(n, c(10,8,0,8,0),"<=",480) 
+> add.constraint(n, c(0,0,6,0,10),"<=",480) 
+> add.constraint(n, c(6,10,0,16,3),"<=",480) 
+> add.constraint(n, c(3,0,9,0,8),"<=",480) 
+> n
+Model name: 
+            C1    C2    C3    C4    C5         
+Minimize   634   560   570   704   812         
+R1           1     0     0     0     0  >=   36
+R2           0     1     1     0     0  >=   45
+R3           0     0     0     1     1  >=   36
+R4          10     8     0     8     0  <=  480
+R5           0     0     6     0    10  <=  480
+R6           6    10     0    16     3  <=  480
+R7           3     0     9     0     8  <=  480
+Kind       Std   Std   Std   Std   Std         
+Type      Real  Real  Real  Real  Real         
+Upper      Inf   Inf   Inf   Inf   Inf         
+Lower        0     0     0     0     0         
+> colNames<-c("A","B1","B2","C1","C2") 
+> N
+Error: objeto 'N' no encontrado
+> n
+Model name: 
+            C1    C2    C3    C4    C5         
+Minimize   634   560   570   704   812         
+R1           1     0     0     0     0  >=   36
+R2           0     1     1     0     0  >=   45
+R3           0     0     0     1     1  >=   36
+R4          10     8     0     8     0  <=  480
+R5           0     0     6     0    10  <=  480
+R6           6    10     0    16     3  <=  480
+R7           3     0     9     0     8  <=  480
+Kind       Std   Std   Std   Std   Std         
+Type      Real  Real  Real  Real  Real         
+Upper      Inf   Inf   Inf   Inf   Inf         
+Lower        0     0     0     0     0         
+> rowNames<-c("res1","res2") 
+> rowNames<-c("DEMA","DEMB","DEMC","CAPM1","CAPM2","CAPM3","CAPM4") 
+> dimnames(n)<-list(rowNames,colNames) 
+> n
+Model name: 
+             A    B1    B2    C1    C2         
+Minimize   634   560   570   704   812         
+DEMA         1     0     0     0     0  >=   36
+DEMB         0     1     1     0     0  >=   45
+DEMC         0     0     0     1     1  >=   36
+CAPM1       10     8     0     8     0  <=  480
+CAPM2        0     0     6     0    10  <=  480
+CAPM3        6    10     0    16     3  <=  480
+CAPM4        3     0     9     0     8  <=  480
+Kind       Std   Std   Std   Std   Std         
+Type      Real  Real  Real  Real  Real         
+Upper      Inf   Inf   Inf   Inf   Inf         
+Lower        0     0     0     0     0         
+> solve(n)
+[1] 2
+> delete.constraint(n,3)
+> n
+Model name: 
+             A    B1    B2    C1    C2         
+Minimize   634   560   570   704   812         
+DEMA         1     0     0     0     0  >=   36
+DEMB         0     1     1     0     0  >=   45
+CAPM1       10     8     0     8     0  <=  480
+CAPM2        0     0     6     0    10  <=  480
+CAPM3        6    10     0    16     3  <=  480
+CAPM4        3     0     9     0     8  <=  480
+Kind       Std   Std   Std   Std   Std         
+Type      Real  Real  Real  Real  Real         
+Upper      Inf   Inf   Inf   Inf   Inf         
+Lower        0     0     0     0     0         
+>  add.constraint(n, c(0,0,0,1,1),">=",10) 
+> n
+Model name: 
+             A    B1    B2    C1    C2         
+Minimize   634   560   570   704   812         
+DEMA         1     0     0     0     0  >=   36
+DEMB         0     1     1     0     0  >=   45
+CAPM1       10     8     0     8     0  <=  480
+CAPM2        0     0     6     0    10  <=  480
+CAPM3        6    10     0    16     3  <=  480
+CAPM4        3     0     9     0     8  <=  480
+R7           0     0     0     1     1  >=   10
+Kind       Std   Std   Std   Std   Std         
+Type      Real  Real  Real  Real  Real         
+Upper      Inf   Inf   Inf   Inf   Inf         
+Lower        0     0     0     0     0         
+>  delete.constraint(n,3)
+>  delete.constraint(n,3)
+>  delete.constraint(n,3)
+>  delete.constraint(n,3)
+> n
+Model name: 
+             A    B1    B2    C1    C2        
+Minimize   634   560   570   704   812        
+DEMA         1     0     0     0     0  >=  36
+DEMB         0     1     1     0     0  >=  45
+R3           0     0     0     1     1  >=  10
+Kind       Std   Std   Std   Std   Std        
+Type      Real  Real  Real  Real  Real        
+Upper      Inf   Inf   Inf   Inf   Inf        
+Lower        0     0     0     0     0        
+> add.constraint(n, c(10,8,0,8,0),"<=",480) 
+> add.constraint(n, c(0,0,6,0,10),"<=",480) 
+> add.constraint(n, c(6,10,0,16,3),"<=",480)
+>  add.constraint(n, c(3,0,9,0,8),"<=",480) 
+> n
+Model name: 
+             A    B1    B2    C1    C2         
+Minimize   634   560   570   704   812         
+DEMA         1     0     0     0     0  >=   36
+DEMB         0     1     1     0     0  >=   45
+R3           0     0     0     1     1  >=   10
+R4          10     8     0     8     0  <=  480
+R5           0     0     6     0    10  <=  480
+R6           6    10     0    16     3  <=  480
+R7           3     0     9     0     8  <=  480
+Kind       Std   Std   Std   Std   Std         
+Type      Real  Real  Real  Real  Real         
+Upper      Inf   Inf   Inf   Inf   Inf         
+Lower        0     0     0     0     0         
+> dimnames(n)<-list(rowNames,colNames) 
+> n
+Model name: 
+             A    B1    B2    C1    C2         
+Minimize   634   560   570   704   812         
+DEMA         1     0     0     0     0  >=   36
+DEMB         0     1     1     0     0  >=   45
+DEMC         0     0     0     1     1  >=   10
+CAPM1       10     8     0     8     0  <=  480
+CAPM2        0     0     6     0    10  <=  480
+CAPM3        6    10     0    16     3  <=  480
+CAPM4        3     0     9     0     8  <=  480
+Kind       Std   Std   Std   Std   Std         
+Type      Real  Real  Real  Real  Real         
+Upper      Inf   Inf   Inf   Inf   Inf         
+Lower        0     0     0     0     0         
+> solve(n)
+[1] 0
+> get.objective(n)
+[1] 55464
+> get.variables(m) 
+Error in get.variables(m) : Model has not been optimized
+> get.variables(n) 
+[1] 36  5 40 10  0
+>  get.constraints(m) 
+Error in get.constraints(m) : Model has not been optimized
+>  get.constraints(n) 
+[1]  36  45  10 480 240 426 468
+> get.dual.solution(m) 
+Error in get.dual.solution(m) : Model has not been optimized
+> get.dual.solution(n) 
+ [1]   1.00 646.50 570.00 714.00  -1.25   0.00   0.00   0.00   0.00   0.00
+[11]   0.00   0.00  98.00
+> get.sensitivity.obj(m) 
+Error in get.sensitivity.obj(m) : Model has not been optimized
+> get.sensitivity.obj(n) 
+$objfrom
+[1] -12.5 462.0 560.0 -10.0 714.0
+
+$objtill
+[1] 1.00e+30 5.70e+02 6.68e+02 8.02e+02 1.00e+30
+
+> get.sensitivity.rhs(n)
+$duals
+ [1] 646.50 570.00 714.00  -1.25   0.00   0.00   0.00   0.00   0.00   0.00
+[11]   0.00  98.00
+
+$dualsfrom
+ [1]  2.769231e+01  5.000000e+00  0.000000e+00  4.693333e+02 -1.000000e+30
+ [6] -1.000000e+30 -1.000000e+30 -1.000000e+30 -1.000000e+30 -1.000000e+30
+[11] -1.000000e+30 -5.000000e+00
+
+$dualstill
+ [1] 3.684211e+01 4.633333e+01 1.133333e+01 5.232000e+02 1.000000e+30
+ [6] 1.000000e+30 1.000000e+30 1.000000e+30 1.000000e+30 1.000000e+30
+[11] 1.000000e+30 1.000000e+01
+
+> 

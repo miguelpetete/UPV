@@ -1,0 +1,61 @@
+{
+    "host": "gtirouter.dsic.upv.es",
+    "manager": "m",
+    "service": "s",
+    "axis": [
+		{
+            "rank": "BDISoldier",
+            "name": "axis_yourlogin",
+            "password": "secret",
+            "amount": 6,
+            "asl": "bdisoldier.asl"
+        },
+        {
+            "rank": "BDIMedic",
+            "name": "medic_axis_yourlogin",
+            "password": "secret",
+            "asl": "bdimedic.asl"
+        },
+         {
+            "rank": "BDIFieldOp",
+            "name": "fieldop_axis_yourlogin",
+            "password": "secret",
+            "asl": "bdifieldop.asl"
+        },
+        {
+            "rank": "BDISoldier",
+            "name": "ccc_coronel_axis",
+            "password": "secret",
+            "amount":2,
+            "asl": "bdicoronel.asl"
+        }
+    ],
+     "allied": [
+		{
+            "rank": "BDISoldier",
+            "name": "allied_yourlogin",
+            "password": "secret",
+            "amount": 6,
+            "asl": "bdisoldier.asl"
+        },
+        {
+            "rank": "BDIMedic",
+            "name": "medic_allied_yourlogin",
+            "password": "secret",
+            "asl": "bdimedic.asl"
+        },
+         {
+            "rank": "BDIFieldOp",
+            "name": "fieldop_allied_yourlogin",
+            "password": "secret",
+            "asl": "bdifieldop.asl"
+        },
+        {
+            "rank": "BDISoldier",
+            "name": "ccc_coronel_allied",
+            "password": "secret",
+            "amount":2,
+            "asl": "bdicoronel.asl"
+        }
+   ]
+  }

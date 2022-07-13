@@ -1,0 +1,1 @@
+var args = process.argv.slice(2), a=parseInt(args[0]), b=args[1], resto=args.slice(2)

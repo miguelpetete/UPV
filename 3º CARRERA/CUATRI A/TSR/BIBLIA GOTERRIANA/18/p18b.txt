@@ -1,0 +1,6 @@
+require( 'net').createServer(function(c) {
+var sum = 0
+c.on('data', function(data) {
+sum += parseInt(data) ; c.write('' + sum)
+})
+}). listen(9000)

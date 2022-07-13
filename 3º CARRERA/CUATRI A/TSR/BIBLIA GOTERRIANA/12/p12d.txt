@@ -1,0 +1,3 @@
+if (err) return
+size += data.length
+if (--count <= 0) console.log( ‘Directory size is ‘+size)

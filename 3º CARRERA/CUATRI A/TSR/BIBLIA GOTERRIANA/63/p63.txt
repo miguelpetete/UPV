@@ -1,0 +1,19 @@
+const emitter = new (require('events')).EventEmitter
+const emittingA = (e,x) => {emitter.emit(e,e,x)}
+const emittingB = (e,x) => {return () => {emitter-emit(e,e,x)}}
+const listener = (e,x) => {
+	console.log("Event "+e+" happens each "+x+" seconds")
+}
+const ending = () => {
+	clearinterval(i); clearInterval(j); console.log("No more events")
+}
+emitter.on("one",listener)
+emitter.on("two",listener)
+let x = 8
+let i = setInterval(() => {emittingA("two",x)}, x*1000)
+x = 4
+let j = setInterval(emittingB("one",x), x*1000)
+x = 10
+setTimeout(ending, x*1000)
+x = 2
+console.log("Events start soon, currently x is "+x)

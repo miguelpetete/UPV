@@ -1,0 +1,2 @@
+for (let i=0; i<5; i++)
+	setTimeout(emisiones, Math.round(Math.random()*3000)+2000)

@@ -1,0 +1,65 @@
+{
+    "host": "gtirouter.dsic.upv.es",
+    "manager": "manager_yourlogin",
+    "manager_password": "secret",
+    "service": "service_yourlogin",
+    "service_password": "secret",
+    "axis": [
+		{
+            "rank": "python.BDIPatrullero1",
+            "name": "axis_minaar1",
+            "password": "secret",
+            "amount": 3,
+            "asl": "bdipatrullero1.asl"
+        },
+        {
+            "rank": "python.BDIPatrullero2",
+            "name": "axis_minaar1",
+            "password": "secret",
+            "amount": 3,
+            "asl": "bdipatrullero2.asl"
+        },
+        {
+            "rank": "python.BDIEnfermero",
+            "name": "medic_axis_minaar1",
+            "password": "secret",
+            "amount":2,
+            "asl": "bdienfermero.asl"
+        },
+         {
+            "rank": "python.BDIOperacionesCampo",
+            "name": "fieldop_axis_minaar1",
+            "password": "secret",
+            "amount":1,
+            "asl": "bdioperacionescampo.asl"
+        },
+        {
+            "rank": "python.BDICoronel",
+            "name": "fieldop_axis_minaar1",
+            "password": "secret",
+            "amount":1,
+            "asl": "bdicoronel.asl"
+        }
+    ],
+     "allied": [
+		{
+            "rank": "BDISoldier",
+            "name": "allied_yourlogin",
+            "password": "secret",
+            "amount": 8,
+            "asl": "bdisoldier.asl"
+        },
+        {
+            "rank": "BDIMedic",
+            "name": "medic_allied_yourlogin",
+            "password": "secret",
+            "asl": "bdimedic.asl"
+        },
+         {
+            "rank": "BDIFieldOp",
+            "name": "fieldop_allied_yourlogin",
+            "password": "secret",
+            "asl": "bdifieldop.asl"
+        }
+   ]
+  }

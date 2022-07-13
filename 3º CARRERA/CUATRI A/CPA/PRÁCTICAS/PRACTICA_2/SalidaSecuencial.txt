@@ -1,0 +1,4 @@
+El programa ha tardado 85.161307
+El numero de planetas es 80000
+The center of mass is in ( 3003.23, 3007.09, 2997.93 ).
+The planet with most neighbors is 70197 (18 neighbors).

@@ -1,0 +1,25 @@
+{
+    "host": "gtirouter.dsic.upv.es",
+    "manager": "m",
+    "manager_password": "secret",   
+    "service": "s",
+    "service_password": "secret",
+    "axis": [
+		{
+            "rank": "drunkenmonkey.BDIDrunkenMonkey",
+            "name": "axis_minaar1",
+            "password": "secret",
+            "amount": 3,
+            "asl": "bdisoldier1.asl"
+        }
+              ],
+    "allied": [
+		{
+            "rank": "BDISoldier",
+            "name": "axis_minaar1",
+            "password": "secret",
+            "amount": 3,
+            "asl": "bdisoldier.asl"
+        }
+              ]
+}

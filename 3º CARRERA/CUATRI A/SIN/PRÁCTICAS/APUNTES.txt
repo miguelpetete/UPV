@@ -1,0 +1,13 @@
+En alpha:
+E-> numero de errores del perceptron
+k-> número de iteraciones 
+Ete-> errores de validación (no nos dice mucho, tendríamos que mirar el número de datos que tenemos para obtener un porcentaje).
+
+El perceptrón converge cuando no se han llegado a alcanzar el 0 de errores de perceptrón con menos k que el máximo que preestablecemos. 
+
+Para elegir el mejor b escogemos el b más alto con un E=0. 
+
+¿COMO ESCOGER EL MEJOR?
+Creamos experiment.py que es un script para ejecutar varios datasheets distintos. 
+
+

@@ -1,0 +1,2 @@
+function f(a,b,c) {return b+c}
+x=f(1,2)

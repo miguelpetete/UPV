@@ -1,0 +1,6 @@
+c.on('data', function(data) {
+require('fs').readFile(data, function(err, data) {
+if (err) c.write(‘unable to read '+data+' file')
+else c.write(data)
+})
+})

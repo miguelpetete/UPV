@@ -1,0 +1,2 @@
+if (++veces == 5) process.exit(0)
+setTimeout(emisiones, Math. round(Math. random( )*3000 )+2000

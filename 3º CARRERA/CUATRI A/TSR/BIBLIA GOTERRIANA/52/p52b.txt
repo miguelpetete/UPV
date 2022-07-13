@@ -1,0 +1,1 @@
+var a = parseInt(process.argv[2]), b = process.argv[3], resto = process.argv.slice(4)

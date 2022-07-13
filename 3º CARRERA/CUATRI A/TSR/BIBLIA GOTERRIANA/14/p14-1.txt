@@ -1,0 +1,7 @@
+// netServer.js
+
+require( 'net').createServer(function(c) {
+c.on(‘data', function() {c.write( ‘Hello')})
+
+}).Listen( 9000)
+

@@ -1,0 +1,22 @@
+{
+    "host": "gtirouter.dsic.upv.es",
+    "manager": "minaar1",
+    "manager_password": "secret",
+    "service": "minaar1",
+    "service_password": "secret",
+    "axis": [
+		{
+            "rank": "BDISoldier",
+            "name": "coronel_minaar1",
+            "password": "secret",
+            "amount": 1,
+            "asl": "bdicoronel.asl"
+        },
+        {
+            "rank": "BDISoldier",
+            "name": "axis_minaar1",
+            "password": "secret",
+            "amount": 1,
+            "asl": "bdipatrullero1.asl"
+        }   ]
+}

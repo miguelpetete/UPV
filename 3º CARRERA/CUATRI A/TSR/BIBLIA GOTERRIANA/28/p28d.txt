@@ -1,0 +1,2 @@
+let rcv = zmq.socket('rep'); rcv.connect( 'tcp://158.42.21.67:9998' )
+let snd = zmq.socket('req'); snd.connect( ‘'tcp://158.42.21.67:9999' )

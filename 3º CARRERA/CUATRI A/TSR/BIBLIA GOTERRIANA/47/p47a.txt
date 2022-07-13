@@ -1,0 +1,2 @@
+function f(s) {return s*2;}
+x=f('1')

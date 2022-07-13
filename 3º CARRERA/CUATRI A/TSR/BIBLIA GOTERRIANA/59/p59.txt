@@ -1,0 +1,9 @@
+const web = require('./web')
+const socket = require('./socket')
+function skip() {}
+function procesa(msg) {var port=parseInt(JSON.parse(msg+'').port)}
+web.server('Server 1', 8081) //primer servidor web
+web.server('Server 2', 8082) //primer servidor web
+socket. proxy( 8000, 8081) //proxy
+socket.server(8001, procesa, skip) //atencion al programador
+setTimeout(( )=>{socket.client(8001, [JSON.stringify({port:8082})], skip, skip)}, 10000)
